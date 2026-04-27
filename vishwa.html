@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form 1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: url('https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center/cover;
+      position: relative;
+    }
+
+    /* Dark overlay for readability */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .form-container {
+      position: relative;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      width: 350px;
+      z-index: 1;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .radio-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: normal;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(45deg, #007bff, #00c6ff);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="form-container">
+    <h1>Form 1</h1>
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" placeholder="Enter your name">
+    </div>
+
+    <div class="form-group">
+      <label>Age</label>
+      <input type="text" placeholder="Enter your age">
+    </div>
+
+    <div class="form-group">
+      <label>Address</label>
+      <input type="text" placeholder="Enter your address">
+    </div>
+
+    <div class="form-group">
+      <label>Department</label>
+      <div class="radio-group">
+        <label><input type="radio" name="dept"> JavaScript</label>
+        <label><input type="radio" name="dept"> HTML</label>
+        <label><input type="radio" name="dept"> SQL</label>
+        <label><input type="radio" name="dept"> C++</label>
+      </div>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
